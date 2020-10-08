@@ -15,8 +15,8 @@ namespace MS2 {
         double Get_Intersection_Area_Length() const;
         double Get_Curve_Length() const;
         double Get_Bounded_Area_Square() const;
-        double Get_X(double t) /*const */ ;
-        double Get_Y(double t) /*const*/ ;
+        double Get_X(double t) const;
+        double Get_Y(double t) const;
         std::string Get_Equation() const;
     };
 }

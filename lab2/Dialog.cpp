@@ -67,7 +67,9 @@ namespace MS2 {
     }
 
     void Get_Intersection_Area_Length(Deltoida &deltoida) {
+        int k = 0;
         std::cout << "Intersection area length = " << deltoida.Get_Intersection_Area_Length() << std::endl;
+        k  = deltoida.Get_Intersection_Area_Length();
     }
 
     void Get_Curve_Length(Deltoida &deltoida) {

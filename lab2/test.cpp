@@ -1,8 +1,7 @@
 #include <math.h>
 
 #include "gtest/gtest.h"
-
-#include "Deltoida.cpp"
+#include "Deltoida.h"
 
 using namespace MS2;
 
