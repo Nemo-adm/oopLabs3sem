@@ -5,6 +5,7 @@
 
 using namespace MS2;
 
+
 TEST(Deltoida_Constructor, Default_Constructor) {
     Deltoida deltoida;
     ASSERT_NO_THROW(deltoida);
