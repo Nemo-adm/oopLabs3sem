@@ -1,0 +1,17 @@
+*.d
+
+*.slo
+*.lo
+*.o
+*.obj
+
+*.gch
+*.pch
+
+
+*.mod
+*.smod
+
+*.exe
+*.out
+*.app
