@@ -25,7 +25,7 @@ namespace Prog3A {
         train& operator () (int carriage_index, int seats_number);                       // занять место
         int& operator [] (int carriage_index);                                           // определить кол-во занятых мест в вагоне
         train& operator += (carriage& main_carriage);                                    // добавить вагон к поезду
-        train& operator ( ) (int carriages_number, int *min_train);                      // для расцепки
-        int get_passengers_number();
+        train operator ( ) (int carriages_number, int *min_train);                      // для расцепки
+        int get_passengers_number();                                                     // кол-во занятых мест
     };
 }
