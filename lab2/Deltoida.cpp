@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdexcept>
 #include "Deltoida.h"
 
 namespace MS2 {
@@ -8,11 +9,14 @@ namespace MS2 {
 
     Deltoida::Deltoida(double r) {
         this->Set_Radius(r);
+        if(r < 0){
+          throw std::runtime_error("The radius should be a non-negative number!");
+      }
     }
 
     Deltoida &Deltoida::Set_Radius(double r) {
         if (r < 0) {
-           throw "The radius should be a non-negative number!";
+           throw std::runtime_error("The radius should be a non-negative number!"); ;
         }
         this->r = r;
         return *this;
@@ -26,6 +30,9 @@ namespace MS2 {
         if (r >= 0) {
            return 4 * r;
         }
+        if (r < 0) {
+           throw std::runtime_error("The radius should be a non-negative number!");
+        }
         return -1;
     }
 
@@ -33,12 +40,18 @@ namespace MS2 {
         if (r >=0){
               return 16*r;
            }
-        return -1;
+           if (r < 0) {
+             throw std::runtime_error("The radius should be a non-negative number!");
+           }
+           return -1;
     }
 
     double Deltoida::Get_Bounded_Area_Square() const {
       if (r >= 0) {
             return M_PI * r*r;
+      }
+      if (r < 0) {
+        throw std::runtime_error("The radius should be a non-negative number!");
       }
       return -1;
     }

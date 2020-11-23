@@ -15,12 +15,13 @@ namespace Prog3C {
         struct carriage *cars;
         int length;
         void cars_push_back(const carriage& main_carriage);
-        void swap(train& another);
     public:
         train();
         train(struct carriage *&cars, const int length);
         train(const train& another);
-        train(train&& another) noexcept;
+        train(train&& another): length(another.length),cars(another.cars){
+          another.cars = nullptr;
+        }
         ~train();
         train& set_carriages(struct carriage *&cars, const int length);
         int get_length() const noexcept;

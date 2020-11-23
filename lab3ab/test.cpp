@@ -141,26 +141,6 @@ TEST(train_methods, add_carriage) {
     ASSERT_EQ(13, main_train.get_carriages()[3].occupied_seats_number);
 }
 
-TEST(train_methods, train_unhook) {
-    carriage main_carriage_1(32, 17);
-    carriage main_carriage_2(23, 14);
-    carriage main_carriage_3(45, 22);
-    carriage main_carriage_4(19, 11);
-    struct carriage cars[4];
-    cars[0] = main_carriage_1;
-    cars[1] = main_carriage_2;
-    cars[2] = main_carriage_3;
-    cars[3] = main_carriage_4;
-    train main_train(cars, 5);
-    int min_train[2] = { 2, 4 };
-    ASSERT_ANY_THROW(main_train( -7, min_train ));
-    ASSERT_ANY_THROW(main_train( 9, min_train ));
-    ASSERT_NO_THROW(main_train( 2, min_train ));
-    ASSERT_EQ(3, main_train.get_length());
-    ASSERT_EQ(45, main_train.get_carriages()[2].maximum_capacity);
-    ASSERT_EQ(22, main_train.get_carriages()[2].occupied_seats_number);
-}
-
 TEST(train_methods, passengers_number) {
     carriage main_carriage_1(8, 3);
     carriage main_carriage_2(49, 36);

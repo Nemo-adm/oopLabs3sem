@@ -1,29 +1,26 @@
 #include <math.h>
 
 #include "gtest/gtest.h"
-#include "Deltoida.h"
+#include "Deltoida.cpp"
 
 using namespace MS2;
 
 
 TEST(Deltoida_Constructor, Default_Constructor) {
     Deltoida deltoida;
-    ASSERT_NO_THROW(deltoida);
     ASSERT_EQ(0, deltoida.Get_Radius());
 }
 
 TEST(Deltoida_Constructor, Initial_Constructor) {
     Deltoida deltoida_1(4);
-    ASSERT_NO_THROW(deltoida_1);
-    ASSERT_EQ(4, deltoida_1.Get_Radius());
     ASSERT_ANY_THROW(Deltoida deltoida_2(-7));
+    ASSERT_EQ(4, deltoida_1.Get_Radius());
 }
 
 TEST(Deltoida_Methods, Setters) {
     Deltoida deltoida;
     ASSERT_NO_THROW(deltoida.Set_Radius(8));
     ASSERT_EQ(8, deltoida.Get_Radius());
-    ASSERT_ANY_THROW(deltoida.Set_Radius(-4));
 }
 
 TEST(Deltoida_Methods, Get_Intersection_Area_Length) {
