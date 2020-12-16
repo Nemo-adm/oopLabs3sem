@@ -125,26 +125,12 @@ namespace Prog3A {
         return *this;
     }
 
-    void train::operator ( ) (int carriages_number, int *min_train, int *length_1, int *length_2) {
+    void train::operator ( ) (int carriages_number, int *min_train) {
         if (carriages_number < 1 || carriages_number > this->length - 1) {
            throw std::invalid_argument("invalid carriages number!");
         }
         struct carriage cars_1[this->length - carriages_number];
         struct carriage cars_2[carriages_number];
-
-        for (int i = 0; i < this->length; i++) {
-            for (int j = 0; j < carriages_number; ){
-                if(i == min_train[j]){
-                  cars_1[length_1] = { this->cars[min_train[i]].maximum_capacity, this->cars[min_train[i]].occupied_seats_number };
-                  length_1++;
-                  j++;
-                }
-                else{
-                  cars_2[length_2] = { this->cars[min_train[i]].maximum_capacity, this->cars[min_train[i]].occupied_seats_number };
-                  length_2++;
-                }
-            }
-        }
       }
 
 

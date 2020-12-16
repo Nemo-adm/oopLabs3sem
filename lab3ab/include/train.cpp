@@ -131,24 +131,6 @@ namespace Prog3A {
         }
         struct carriage cars_1[this->length - carriages_number];
         struct carriage cars_2[carriages_number];
-        int j = 0;
-        int length_1 = 1;
-        int length_2 = 1;
-        for (int i = 0; i < this->length; i++ ) {
-            if (i == min_train[j] && j < carriages_number) {
-               cars_1[length_1] = { this->cars[min_train[j]].maximum_capacity, this->cars[min_train[j]].occupied_seats_number };
-               length_1++;
-               j++;
-               printf("len1 = %d in cuc\n", length_1);
-            }
-            else {
-               cars_2[length_2] = { this->cars[i].maximum_capacity, this->cars[i].occupied_seats_number };
-               length_2++;
-            }
-        }
-        train train_1(cars_1, length_1);
-        train train_2(cars_2, length_2);
-        return train_1;
    }
 
 

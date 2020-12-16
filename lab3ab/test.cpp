@@ -2,7 +2,7 @@
 
 #include "gtest/gtest.h"
 
-#include "include/train.h"
+#include "train.h"
 
 using namespace Prog3A;
 

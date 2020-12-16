@@ -145,10 +145,10 @@ namespace Prog3C {
     }
 
     train& train::operator = (train&& another) noexcept {
-        if (this != &another) {
-           //swap(another);
-        }
-
+        delete[] cars;
+        cars = another.cars;
+        length = another.length;
+        another.cars = nullptr;
         return *this;
     }
 
