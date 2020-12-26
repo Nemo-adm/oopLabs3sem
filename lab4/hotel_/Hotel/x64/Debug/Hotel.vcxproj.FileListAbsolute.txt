@@ -1,4 +1,0 @@
-C:\Users\Михаил\Hotel\x64\Debug\Hotel.exe
-C:\Users\Михаил\Hotel\x64\Debug\Hotel.pdb
-C:\Users\user\Desktop\hotel_\Hotel\x64\Debug\Hotel.exe
-C:\Users\user\Desktop\hotel_\Hotel\x64\Debug\Hotel.pdb
